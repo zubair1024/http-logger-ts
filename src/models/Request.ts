@@ -1,6 +1,5 @@
 import { Schema, model } from "mongoose";
 
-// 1. Create an interface representing a document in MongoDB.
 interface IAppRequest {
   path: string;
   body: Object;
@@ -10,7 +9,6 @@ interface IAppRequest {
   updatedAt: Date;
 }
 
-// 2. Create a Schema corresponding to the document interface.
 const appRequestSchema = new Schema<IAppRequest>({
   path: { type: String },
   body: { type: Object },
