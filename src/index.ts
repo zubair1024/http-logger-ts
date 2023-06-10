@@ -18,6 +18,7 @@ async function logAppRequest(req: Request) {
   await connectDB();
   const requestObj = new AppRequest({
     path,
+    method: req.method,
     body,
     query,
     params,

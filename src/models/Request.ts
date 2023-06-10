@@ -5,12 +5,14 @@ interface IAppRequest {
   body: Object;
   params: Object;
   query: Object;
+  method: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
 const appRequestSchema = new Schema<IAppRequest>({
   path: { type: String },
+  method: { type: String },
   body: { type: Object },
   params: { type: Object },
   query: { type: Object },
